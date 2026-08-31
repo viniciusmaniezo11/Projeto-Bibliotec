@@ -1,0 +1,89 @@
+/* =============================================================== */
+/* HEADER */
+/* =============================================================== */
+
+.header {
+    background-color: var(--azul-escuro);
+
+    display: flex;
+    /* justify-content -> Alinha no sentido do flex */
+    justify-content: space-between;
+    /* align-items -> Alinha no sentido contrario do flex */
+    align-items: center;
+
+    padding: 0 120px;
+
+    /* 10% Da visualização do dispositivo no site */
+    height: 10vh;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+
+    gap: 50px;
+}
+
+.navigation a {
+    text-transform: uppercase;
+    font-size: 1em;
+    /* 1em -> puxa do pai (navegação) porem por não ter definido ele puxa o padrão (16px)*/
+    font-weight: 700;
+}
+
+a {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+/* =============================================================== */
+/* MAIN BANNER */
+/* =============================================================== */
+
+.main-banner {
+    color: var(--branco);
+
+    height: 70vh;
+
+    background-image: url(../imgs/banner-principal-home-svg.svg);
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 120px;
+}
+
+.main-banner img {
+    align-self: flex-end;
+    width: 35%;
+}
+
+.banner-text {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 50px;
+}
+
+.banner-text p {
+    font-size: 1.5em;
+    width: 50%;
+}
+
+.button {
+    padding: 20px 50px;
+
+    border-radius: 10px;
+
+    background-color: var(--cor-destaque);
+    color: var(--azul-escuro);
+
+    font-size: 1.2em;
+    font-weight: 700;
+}
