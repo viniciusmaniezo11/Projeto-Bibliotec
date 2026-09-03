@@ -292,11 +292,9 @@ a {
     background-color: var(--azul-escuro);
 
     padding: 0 120px;
-    padding-top: 50px;
+    padding-top: 50px; 
 
     height: 40vh;
-
-
 }
 
 .links {
