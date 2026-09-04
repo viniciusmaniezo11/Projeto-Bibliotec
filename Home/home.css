@@ -1,42 +1,4 @@
 /* =============================================================== */
-/* HEADER */
-/* =============================================================== */
-
-.header {
-    background-color: var(--azul-escuro);
-
-    display: flex;
-    /* justify-content -> Alinha no sentido do flex */
-    justify-content: space-between;
-    /* align-items -> Alinha no sentido contrario do flex */
-    align-items: center;
-
-    padding: 0 120px;
-
-    /* 10% Da visualização do dispositivo no site */
-    height: 10vh;
-}
-
-.navigation {
-    display: flex;
-    align-items: center;
-
-    gap: 50px;
-}
-
-.navigation a {
-    text-transform: uppercase;
-    font-size: 1em;
-    /* 1em -> puxa do pai (navegação) porem por não ter definido ele puxa o padrão (16px)*/
-    font-weight: 700;
-}
-
-a {
-    color: var(--branco);
-    text-decoration: none;
-}
-
-/* =============================================================== */
 /* MAIN BANNER */
 /* =============================================================== */
 
@@ -285,61 +247,47 @@ a {
 /* FOOTER */
 /* =============================================================== */
 
-.content {
-    display: flex;
-    justify-content: space-between;
-
+.footer {
     background-color: var(--azul-escuro);
-
-    padding: 0 120px;
-    padding-top: 50px; 
-
+    padding: 0px 120px;
     height: 40vh;
-}
-
-.links {
-    color: var(--branco);
-
-    display: flex;
-    gap: 100px;
-}
-
-.links h2 {
-    color: var(--cor-destaque);
-
-    font-size: 1em;
-    font-weight: 600;
-}
-
-.library, .about-us {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-}
-
-.button2 {
-    font-size: 1em;
 }
 
 .logos {
     display: flex;
-    flex-direction: column;
-    gap: 150px;
+    justify-content: space-between;
 }
 
-.social-media {
+.nav-footer p, .nav-social p {
+    color: var(--cor-destaque);
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.nav-footer a {
+    color: white;
+    font-size: 1em;
+}
+
+.nav-social {
     display: flex;
-    flex-direction: row;
+    gap: 15px;
+
     align-items: center;
-
-    gap: 160px;
 }
 
-.rodape {
-    display: flex;
-    gap: 200px;
-    padding-right: 20px;
+.footer-line {
+    height: 1px;
+    background-color: var(--branco);
+}
 
-    margin-bottom: 130px;
+.terms p, .nav-terms a {
+    color: var(--branco);
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+.terms {
+    display: flex;
+    justify-content: space-between;
 }

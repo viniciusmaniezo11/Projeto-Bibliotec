@@ -15,6 +15,7 @@
     --azul-escuro:#26333D;
     --texto:#26333D;
     --branco:#ffffff;
+    --fundos: #e9f0ef;
     --cor-destaque:#2fd6cb;
 }
 
@@ -26,4 +27,42 @@ body {
     font-family: "Montserrat", sans-serif;
     background-color: var(--branco);
     color: var(--texto);
+}
+
+/* =============================================================== */
+/* HEADER */
+/* =============================================================== */
+
+.header {
+    background-color: var(--azul-escuro);
+
+    display: flex;
+    /* justify-content -> Alinha no sentido do flex */
+    justify-content: space-between;
+    /* align-items -> Alinha no sentido contrario do flex */
+    align-items: center;
+
+    padding: 0 120px;
+
+    /* 10% Da visualização do dispositivo no site */
+    height: 10vh;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+
+    gap: 50px;
+}
+
+.navigation a {
+    text-transform: uppercase;
+    font-size: 1em;
+    /* 1em -> puxa do pai (navegação) porem por não ter definido ele puxa o padrão (16px)*/
+    font-weight: 700;
+}
+
+a {
+    color: var(--branco);
+    text-decoration: none;
 }
