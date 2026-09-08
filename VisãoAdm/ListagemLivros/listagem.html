@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Livros</title>
+
+    <link rel="stylesheet" href="../../styles/global.css">
+    <link rel="stylesheet" href="listagem.css">
+
+    <link rel="shortcut icon" href="../../imgs/Icone - Bibliotec.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+</head>
+
+<body class="list-page">
+    <aside class="aside">
+        <div class="top-menu">
+            <button class="close-button">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <img class="logo" src="../../imgs/Logo Vertical - clara.svg" alt="">
+        </div>
+
+        <nav class="nav-menu">
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-user"></i>
+                <span>Perfil</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-user-plus"></i>
+                <span>Cadastrar Usuário</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-user-group"></i>
+                <span>Listar Usuários</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-book-medical"></i>
+                <span>Cadastrar Livro</span>
+            </a>
+
+            <a href="#" class="menu-item active">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <span>Listar Livros</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-address-book"></i>
+                <span>Livros Reservados</span>
+            </a>
+        </nav>
+
+        <a href="#" class="exit-button">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Sair</span>
+        </a>
+
+    </aside>
+
+    <main class="list-content">
+
+        <section class="header-page">
+            <h1>Listar Livros</h1>
+            <p>Gerencie e acompanhe os livros cadastrados.</p>
+        </section>
+
+        <!-- CARD PRINCIPAL -->
+         <section class="card-list">
+            <div class="search-area">
+
+                <div class="search-camp">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Buscar livro por nome...">
+                </div>
+
+                <button class="filter-button">
+                    <i class="fa-solid fa-sliders"></i>
+                    <span>Filtros</span>
+                </button>
+            </div>
+         </section>
+    </main>
+</body>
+
+</html>
