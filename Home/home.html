@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bibliotec - Gestão de bibliotecas</title>
-    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="shortcut icon" href="../imgs/Icone - Bibliotec.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 
 <body>
@@ -21,6 +23,11 @@
             <a href="#acervo">Nosso acervo</a>
             <a href="#acesso">Login</a>
         </nav>
+
+        <!-- RESPONSIVIDADE -->
+        <button class="menu-button" id="menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </header>
 
 
@@ -31,7 +38,7 @@
                 <h1>Bem-vindo ao Bibliotec</h1>
                 <p>O melhor gerenciador para biblioteca de maneira moderna e automatizada!</p>
 
-                <a href="#" class="button">Acessar</a>
+                <a href="../login/login.html" class="button">Acessar</a>
             </div>
 
 
@@ -135,44 +142,52 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <section class="main-footer">
-            <div class="logos">
-                <img src="../imgs/Logo Horizontal - branca.svg" alt="Logo do bibliotec">
-                <img src="../imgs/SENAI_São_Paulo_logo 1.svg" alt="">
+    <!-- FOOTER -->
+    <footer>
+        <section class="main">
+            <div class="rodape-logos">
+                <img src="../imgs/Logo Horizontal - branca.svg" alt="Bibliotec" />
+                <img src="../imgs/SENAI_São_Paulo_logo 1.svg" alt="SENAI" />
             </div>
 
-            <div class="infos">
+            <div class="rodape-informacoes">
                 <nav class="nav-footer">
                     <p>Biblioteca</p>
-                    <a href="#">Baixar o aplicativo</a>
+                    <a href="#">Baixar aplicativos</a>
                     <a href="#">Suporte ao usuário</a>
                 </nav>
                 <nav class="nav-footer">
                     <p>Quem somos</p>
-                    <a href="#">Clientes</a>
-                    <a href="#">Beneficios</a>
+                    <a href="# ">Clientes</a>
+                    <a href="#">Benefícios</a>
                 </nav>
-                <nav class="nav-social">
-                    <p>Siga nas redes sociais</p>
-                    <a href="#"><img src="../imgs/icone-facebook.svg" alt="Facebook"></a>
-                    <a href="#"><img src="../imgs/icone-instagram.svg" alt="Instagram"></a>
-                    <a href="#"><img src="../imgs/icone-linkedin.svg" alt="Linkedin"></a>
-                </nav>
-            </div>
-
-            <span class="footer-line"></span>
-
-            <div class="terms">
-                <p>©Bibliotec 2026</p>
-                <nav class="nav-terms">
-                    <a href="#">Acessibilidade</a>
-                    <a href="#">Politica de privacidade</a>
-                    <a href="#">Termos e condições</a>
+                <p>Siga nas redes sociais</p>
+                <nav class="rodape-icones">
+                    <a href="#facebook">
+                        <img src="../imgs/icone-facebook.svg" alt=" Icone do Facebook" />
+                    </a>
+                    <a href="#instagram">
+                        <img src="../imgs/icone-instagram.svg" alt="Icone do Instagram" />
+                    </a>
+                    <a href="#linkedin">
+                        <img src="../imgs/icone-linkedin.svg" alt="Linkedin" />
+                    </a>
                 </nav>
             </div>
         </section>
+
+        <span></span>
+
+        <section class="footer-inferior">
+            <p>&copy; Biblio Tec</p>
+            <nav class="footer">
+                <a href="#">Acessibilidade</a>
+                <a href="#">Politica de Privacidade</a>
+                <a href="#">Termos e condições</a>
+            </nav>
+        </section>
     </footer>
+    <script src="home.js"></script>
 </body>
 
 </html>

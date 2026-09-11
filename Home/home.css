@@ -135,7 +135,8 @@
 
     border: 1px solid var(--azul-escuro);
     border-radius: 30px;
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25); /* x -> y -> blur -> cor com transparencia*/
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25);
+    /* x -> y -> blur -> cor com transparencia*/
 
     text-align: center;
 
@@ -203,9 +204,9 @@
 
     justify-content: space-between;
     align-items: center;
-    
+
     padding: 50px 120px;
-    
+
     gap: 100px;
 }
 
@@ -247,47 +248,443 @@
 /* FOOTER */
 /* =============================================================== */
 
-.footer {
+footer {
     background-color: var(--azul-escuro);
-    padding: 0px 120px;
-    height: 40vh;
+    color: var(--branco);
+    padding: 100px 120px 30px;
 }
 
-.logos {
+.main {
     display: flex;
     justify-content: space-between;
 }
 
-.nav-footer p, .nav-social p {
+.rodape-logos {
+    display: flex;
+    flex-direction: column;
+    gap: 130px;
+}
+
+.rodape-informacoes {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 100px;
+}
+
+.nav-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-footer p {
     color: var(--cor-destaque);
-    font-size: 1em;
-    font-weight: 700;
+    margin-bottom: 20px;
+
 }
 
 .nav-footer a {
-    color: white;
-    font-size: 1em;
-}
-
-.nav-social {
-    display: flex;
-    gap: 15px;
-
-    align-items: center;
-}
-
-.footer-line {
-    height: 1px;
-    background-color: var(--branco);
-}
-
-.terms p, .nav-terms a {
     color: var(--branco);
-    font-size: 0.8em;
-    font-weight: 400;
+    margin-bottom: 10px;
 }
 
-.terms {
+.icones {
+    display: flex;
+    gap: 20px;
+}
+
+footer span {
+    display: flex;
+    margin: 50px 0;
+    background-color: white;
+    height: 1px;
+    width: 100%;
+}
+
+.footer-inferior {
     display: flex;
     justify-content: space-between;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.rodape-informacoes p {
+    color: var(--cor-destaque);
+    font-size: 1em;
+    font-weight: 700;
+    width: 100%;
+}
+
+.footer-inferior {
+    display: flex;
+}
+
+/* =============================================================== */
+/* RESPONSIVIDADE */
+/* =============================================================== */
+
+.menu-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    display: none;
+    /* esconde o elemento */
+}
+
+.menu-button i {
+    font-size: 2em;
+
+    color: var(--branco);
+}
+
+/* RESPONSIVIDADE COM TAMANHOS -> MEDIA QUERY */
+
+@media (max-width: 1024px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    .header img {
+        width: 60%;
+    }
+
+    .banner-text h1 {
+        text-align: center;
+    }
+
+    /* --------------------------- */
+    /* BENEFITS */
+    /* --------------------------- */
+
+    .benefits {
+        gap: 50px;
+
+        padding: 30px 0;
+
+        overflow: hidden;
+    }
+
+    .benefits-list {
+        grid-template-columns: repeat(3, 30%);
+
+        overflow-x: scroll;
+        /* permite que o objeto role para o lado */
+
+        padding: 50px 20px;
+
+        justify-content: flex-start;
+    }
+
+    .benefits-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .benefit-card {
+        padding: 80px 10px 50px;
+    }
+
+    .benefit-card h3 {
+        margin-bottom: 25px;
+        width: 60%;
+    }
+
+    .benefit-card p {
+        width: 60%;
+    }
+
+    /* --------------------------- */
+    /* MID BANNER */
+    /* --------------------------- */
+
+    .mid-banner {
+        background-position: center;
+        padding: 0 30px;
+    }
+
+    .mid-banner .banner-text {
+        align-items: flex-end;
+    }
+
+    .mid-banner .banner-text p {
+        text-align: right;
+    }
+
+    /* --------------------------- */
+    /* COLLECTION */
+    /* --------------------------- */
+
+    .collection {
+        padding: 70px 40px;
+        gap: 50px;
+    }
+
+    .book-collection {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+
+        gap: 40px 20px;
+    }
+
+    /* quebra a pagina quando tem flex */
+    /* flex-wrap: wrap; */
+
+    .book img {
+        max-width: 100%;
+    }
+
+    .book h3 {
+        font-size: 1.2em;
+    }
+
+    .book-info {
+        font-size: 1em;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 0 40px;
+
+        position: relative;
+    }
+
+    .menu-button {
+        /* faz o menu hamburguer aparecer novamente */
+        display: flex;
+    }
+
+    .navigation {
+        background-color: var(--azul-escuro);
+
+        position: absolute;
+
+        /* distancia de 10vh no topo */
+        top: 10vh;
+
+        /* Encosta na esquerda */
+        left: 0;
+
+        width: 100%;
+        height: auto;
+
+        padding: 40px;
+
+        border-radius: 0 0 0 30px;
+
+        flex-direction: column;
+        align-items: flex-end;
+
+        gap: 20px;
+
+        /* so funciona com position, quanto maior mais pra cima esse elemento fica */
+        z-index: 100;
+
+        display: none;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .main-banner {
+        height: 50vh;
+        padding: 30px 0 10px 0;
+
+        position: relative;
+    }
+
+    .main-banner .banner-text {
+        width: 100%;
+        height: 100%;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-banner .banner-text h1 {
+        font-size: 2em;
+    }
+
+    .main-banner .banner-text p {
+        display: none;
+    }
+
+    .main-banner img {
+        width: 40%;
+
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        z-index: 1;
+    }
+
+    .main-banner .button {
+        padding: 20px 40px;
+
+        font-size: 1.2em;
+
+        z-index: 2;
+    }
+
+    /* --------------------------- */
+    /* BENEFITS */
+    /* --------------------------- */
+
+    .benefits-list {
+        grid-template-columns: repeat(3, 45%);
+    }
+
+    .benefit-icon img {
+        width: 40%;
+    }
+
+    /* --------------------------- */
+    /* MID BANNER */
+    /* --------------------------- */
+
+    .mid-banner .banner-text {
+        display: none;
+    }
+
+    /* --------------------------- */
+    /* FOOTER */
+    /* --------------------------- */
+
+    footer {
+        padding: 50px 40px;
+    }
+
+    footer .main {
+        flex-direction: column;
+
+        gap: 100px;
+    }
+
+    .rodape-logos {
+        flex-direction: row;
+
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .rodape-logos img {
+        width: 40%;
+    }
+
+    .rodape-informacoes {
+        gap: 20px;
+    }
+
+    .rodape-informacoes p {
+        font-size: 1.5em;
+    }
+
+    .nav-footer a, .footer-inferior {
+        font-size: 1.2em;
+    }
+
+    .rodape-icones img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .rodape-icones {
+        display: flex;
+        gap: 15px;
+    }
+
+    footer span {
+        margin: 50px 0 30px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: right;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    /* --------------------------- */
+    /* MAIN BANNER */
+    /* --------------------------- */
+
+    .main-banner img {
+        width: 80%;
+    }
+
+    /* --------------------------- */
+    /* BENEFITS */
+    /* --------------------------- */
+
+    .benefits-list {
+        grid-template-columns: repeat(3, 65%);
+    }
+
+    .benefit-icon {
+        width: 35%;
+    }
+
+    /* --------------------------- */
+    /* BENEFITS */
+    /* --------------------------- */
+
+    .mid-banner {
+        background-position: 40%;
+    }
+
+    /* --------------------------- */
+    /* FOOTER */
+    /* --------------------------- */
+
+    footer .main {
+        gap: 50px;
+    }
+
+    .rodape-informacoes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rodape-logos {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .rodape-logos img {
+        width: 100%;
+    }
+
+    .rodape-icones {
+        gap: 10px;
+    }
+
+    .rodape-icones img {
+        width: 80%;
+    }
+
+    .footer-inferior {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .footer {
+        gap: 10px;
+        text-align: left;
+    }
+
 }
