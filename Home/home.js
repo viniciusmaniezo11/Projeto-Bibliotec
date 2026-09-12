@@ -4,9 +4,9 @@ const navMenu = document.querySelector(".navigation");
 menu.addEventListener("click", function() {
 
     if(navMenu.className == "navigation") {
-        navMenu.className = "navigation.active";
+        navMenu.classList.toggle("active");
     }
     else {
         navMenu.className = "navigation";
     }
-}) 
+})
