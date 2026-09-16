@@ -10,3 +10,6 @@ menu.addEventListener("click", function() {
         navMenu.className = "navigation";
     }
 }) 
+
+// Opção com arrow function, ou função lambda
+menu.addEventListener("click", () => {})
