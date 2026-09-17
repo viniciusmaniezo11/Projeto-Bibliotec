@@ -1,22 +1,21 @@
-/* =============================================================== */
-/* CONFIGURAÇÕES GLOBAIS */
-/* =============================================================== */
+/*! =============================================================== */
+/*! CONFIGURAÇÕES GLOBAIS */
+/*! =============================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     box-sizing: border-box;
-
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
-    --azul-escuro:#26333D;
-    --texto:#26333D;
-    --branco:#ffffff;
-    --fundos: #e9f0ef;
-    --cor-destaque:#2fd6cb;
+    --azul-escuro: #26333D;
+    --texto: #26333D;
+    --branco: #FFFFFF;
+    --cor-destaque: #2FD6CB;
+    --fundos: #E9F0EF;
     --textos-paginas: #535353;
     --cor-bordas: #CCCCCC;
 }
@@ -31,55 +30,63 @@ body {
     color: var(--texto);
 }
 
-/* =============================================================== */
-/* HEADER */
-/* =============================================================== */
+/*! =============================================================== */
+/*! HEADER */
+/*! =============================================================== */
 
-.header {
+a {
+    color: var(--branco);
+    text-decoration: none; /* tira o sublinhado do link */
+}
+
+.cabecalho {
     background-color: var(--azul-escuro);
 
     display: flex;
-    /* justify-content -> Alinha no sentido do flex */
+    /* flex-direction: row; */
+
+    /* alinha no sentido do flex */
     justify-content: space-between;
-    /* align-items -> Alinha no sentido contrario do flex */
+
+    /* alinha no sentido contrário do flex */
     align-items: center;
 
     padding: 0 120px;
 
-    /* 10% Da visualização do dispositivo no site */
-    height: 10vh;
+    height: 10vh; /* 10% da visualização vertical do dispositivo */
 }
 
-.navigation {
+.navegacao {
     display: flex;
     align-items: center;
 
     gap: 50px;
 }
 
-.navigation a {
+.navegacao a {
     text-transform: uppercase;
-    font-size: 1em;
-    /* 1em -> puxa do pai (navegação) porem por não ter definido ele puxa o padrão (16px)*/
-    font-weight: 700;
+    font-size: 1em; /* equivale a 16px */  
+    font-weight: 500;
 }
 
-a {
-    color: var(--branco);
-    text-decoration: none;
-}
 
-/* ===================================================================================================================================== */
-/* LAYOUT DAS PÁGINAS PRINCIPAIS */
 
-/* PÁGINA */
+/*! =============================================================== */
+/*! MAIN PAGES LAYOUT */
+/*! =============================================================== */
+
+
+/*! ------------------ PAGINA ------------------ */
+
 
 .pagina-listagem {
     display: grid;
     grid-template-columns: auto 1fr;
 }
 
-/* MENU LATERAL */
+
+/*! ASIDE */
+
 
 .menu-lateral {
     background-color: var(--azul-escuro);
@@ -94,7 +101,7 @@ a {
     padding: 30px 50px;
 }
 
-/* TOPO DO MENU */
+/*! ------------------ TOPO DO MENU ------------------ */
 
 .topo-menu {
     display: flex;
@@ -119,14 +126,14 @@ a {
     cursor: pointer;
 }
 
-/* LOGO */
+/*! ------------------ LOGO ------------------ */
 .logo {
     margin-top: 10%;
     margin-bottom: 30%;
     width: 40%;
 }
 
-/* NAVEGAÇÃO */
+/*! ------------------ NAVEGAÇÃO ------------------ */
 
 .menu-navegacao {
     display: flex;
@@ -161,7 +168,7 @@ a {
     border-bottom: 4px solid var(--cor-destaque);
 }
 
-/* BOTÃO SAIR */
+/*! ------------------ BOTÃO SAIR ------------------ */
 
 .botao-sair {
     display: flex;
@@ -185,7 +192,7 @@ a {
     color: var(--cor-destaque);
 }
 
-/* CONTEÚDO */
+/*! ------------------ CONTEÚDO ------------------ */
 
 .conteudo-listagem {
     display: flex;
@@ -197,7 +204,7 @@ a {
 
     background-color: var(--branco);
 
-    background-image: url(../imgs/fundo-telas.svg);
+    background-image: url(../imgs/Fundo\ -\ telas.svg);
     background-repeat: no-repeat;
     background-size: 70%;
     background-position: right bottom;
@@ -205,7 +212,7 @@ a {
     height: 100vh;
 }
 
-/* CABEÇALHO MAIN */
+/*! ------------------ CABEÇALHO MAIN ------------------ */
 
 .cabecalho-pagina h1 {
     font-size: 2em;
@@ -219,7 +226,7 @@ a {
     color: var(--textos-paginas);
 }
 
-/* CARD PRINCIPAL */
+/*! ------------------ CARD PRINCIPAL ------------------ */
 
 .card-listagem {
     /* APLICA O FILTRO DE DESFOQUE */

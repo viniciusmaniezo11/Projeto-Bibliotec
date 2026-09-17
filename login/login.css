@@ -1,8 +1,8 @@
-/* =============================================================== */
-/* MAIN */
-/* =============================================================== */
+/*! =============================================================== */
+/*! MAIN */
+/*! =============================================================== */
 
-.content {
+.conteudo {
     background-image: url(../imgs/banner-login.png);
     background-size: cover;
 
@@ -13,24 +13,30 @@
     align-items: center;
 }
 
-
-/* =============================================================== */
-/* LOGIN */
-/* =============================================================== */
+/*! =============================================================== */
+/*! AREA DE LOGIN */
+/*! =============================================================== */
 
 .login {
     display: flex;
     flex-direction: column;
+
     background-color: var(--fundos);
 
     width: 35%;
+
     padding: 50px 100px;
-    gap: 50px;
 
     border-radius: 30px;
+
+    gap: 50px;
 }
 
-.login-header {
+/*! =============================================================== */
+/*! LOGIN HEADER */
+/*! =============================================================== */
+
+.login-cabecalho {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,17 +44,19 @@
     gap: 5px;
 }
 
-.login-header img {
+.login-cabecalho img {
     margin-bottom: 15px;
 }
 
-.login-header h1 {
+.login-cabecalho h1 {
     font-size: 1.5em;
 }
 
-.login-header p {
+.login-cabecalho p {
     font-size: 1em;
 }
+
+/*! ------------------ FORMULÁRIO ------------------ */
 
 form {
     display: flex;
@@ -57,49 +65,54 @@ form {
     gap: 20px;
 }
 
-.camp {
+/*! ------------------ CAMPOS ------------------ */
+
+.campo {
     display: flex;
     flex-direction: column;
-
     gap: 10px;
 }
 
-input, .join-button, .join-google {
+input, 
+.botao-entrar,
+.botao-google
+{
     width: 100%;
     height: 50px;
 
     border-radius: 10px;
 }
 
-.camp label {
+.campo label {
     color: var(--azul-escuro);
     font-size: 1em;
     font-weight: 700;
 }
 
-.camp input {
+
+.campo input {
     border: none;
     outline: none;
 
     background-color: var(--branco);
 
-    padding: 0px 20px;
+    padding: 0 20px;
 
     font-size: 1em;
 }
 
-.camp input::placeholder {
+.campo input::placeholder {
     color: #00000050;
     font-style: italic;
 }
 
-/* PASSWORD CAMP */
+/*! ------------------ CAMPO SENHA ------------------ */
 
-.password-camp {
+.campo-senha {
     position: relative;
 }
 
-.eye-button {
+.botao-olho {
     position: absolute;
 
     right: 20px;
@@ -113,13 +126,12 @@ input, .join-button, .join-google {
     color: #00000050;
 }
 
-/* JOIN BUTTON */
+/*! ------------------ BOTÃO ENTRAR ------------------ */
 
-.join-button {
+.botao-entrar {
     margin-top: 30px;
-
     border: none;
-
+    
     background-color: var(--azul-escuro);
     color: var(--branco);
 
@@ -128,21 +140,21 @@ input, .join-button, .join-google {
 
     text-transform: uppercase;
 
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-
     transition: transform 0.2s;
+
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.join-button:hover {
+.botao-entrar:hover {
     cursor: pointer;
     background-color: #344957;
 
     transform: translateY(-3px);
 }
 
-/* JOIN GOOGLE */
+/*! ------------------ BOTAO GOOGLE ------------------ */
 
-.join-google {
+.botao-google {
     border: none;
 
     background-color: var(--branco);
@@ -155,20 +167,18 @@ input, .join-button, .join-google {
     justify-content: center;
 
     gap: 20px;
-    
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
     transition: transform 0.2s;
 
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.join-google:hover {
+.botao-google:hover {
     cursor: pointer;
-
     transform: translateY(-3px);
 }
 
-.join-button img {
+.botao-google img {
     width: 30px;
     height: 30px;
 }

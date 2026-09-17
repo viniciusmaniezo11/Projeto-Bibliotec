@@ -1,16 +1,18 @@
-const menu = document.getElementById("menu"); //Pegando o elemento pelo ID
-const navMenu = document.querySelector(".navigation");
+
+const menu = document.getElementById("menu"); // pegando o elemento pelo ID
+
+// estamos pegando o elemento de forma genérica - pode ser classe (precisa trazer o ponto) ou pode ser ID (precisa trazer a hashtag)
+const navMenu = document.querySelector(".navegacao");
 
 menu.addEventListener("click", function() {
 
-    if(navMenu.className == "navigation") {
-        navMenu.classList.toggle("active");
+    if(navMenu.className == "navegacao") {
+        navMenu.className = "navegacao ativo";
     }
     else {
-        navMenu.className = "navigation";
+        navMenu.className = "navegacao";
     }
-}) 
+})
 
-// Opção com arrow function, ou função lambda
+// opção com arrow function -> função lambda
 // menu.addEventListener("click", () => {})
-// })

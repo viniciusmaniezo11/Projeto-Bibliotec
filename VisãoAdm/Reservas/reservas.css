@@ -1,4 +1,4 @@
-/* BUSCA */
+/*! ------------------ BUSCA ------------------ */
 
 .area-busca {
     display: flex;
@@ -54,7 +54,7 @@
     color: var(--textos-paginas);
 }
 
-/* FILTRO */
+/*! ------------------ FILTRO ------------------ */
 
 .botao-filtro {
     height: 50px;
@@ -174,7 +174,7 @@ input[type="checkbox"]:checked::after {
 }
 
 
-/* RODAPÉ DA LISTAGEM */
+/*! ------------------ RODAPÉ DA LISTAGEM ------------------ */
 
 .rodape-listagem {
     margin-top: 30px;
